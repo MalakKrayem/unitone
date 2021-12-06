@@ -1,11 +1,8 @@
 <template>
-  <div class="img">
-    <img src="../../assets/logo2.png" alt="" />
-  </div>
-  <nav class="navbar navbar-dark bg-black" aria-label="First navbar example">
+  <div>
     <div class="container-fluid">
       <button
-        class="navbar-toggler collapsed"
+        class="navbar-toggler"
         type="button"
         data-bs-toggle="collapse"
         data-bs-target="#navbarsExample01"
@@ -17,10 +14,10 @@
       </button>
       <div class="navs">
         <router-link class="navbar-brand" :to="{ name: 'Home' }"
-          >الرئيسية</router-link
+          >Home</router-link
         >
         <router-link class="navbar-brand" :to="{ name: 'About' }"
-          >عن الشركة</router-link
+          >About Us</router-link
         >
       </div>
       <button @click="setLocale()">
@@ -40,11 +37,8 @@
           />
         </svg>
       </button>
-      <div class="navbar-collapse collapse" id="navbarsExample01">
-        <ul
-          class="navbar-nav me-auto mb-2 text-center"
-          style="height: 100%; z-index: 10; width: 100%"
-        >
+      <div class="collapse navbar-collapse" id="navbarsExample01">
+        <ul class="navbar-nav me-auto mb-2">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="#">Home</a>
           </li>
@@ -86,42 +80,15 @@
         </form>
       </div>
     </div>
-  </nav>
+  </div>
 </template>
 
 <script>
-export default {
-  methods: {
-    setLocale() {
-      if (this.$i18n.locale == "ar") {
-        this.$i18n.locale = "en";
-      }
-      if (this.$i18n.locale == "en") {
-        this.$i18n.locale = "ar";
-      }
-    },
-  },
-};
+export default {};
 </script>
 
 <style lang="scss" scoped>
-.navs {
-  width: 90%;
-  float: right;
-}
-.img {
-  width: 20%;
-  margin: auto;
-}
-img {
-  width: 150px;
-  height: 100px;
-}
-a {
-  text-decoration: none;
-  color: white;
-}
-button {
-  background-color: transparent;
+* {
+  direction: ltr;
 }
 </style>

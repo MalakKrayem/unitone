@@ -1,5 +1,6 @@
 <template>
   <div>
+    <p>{{ $t("message") }}</p>
     <Swiper />
     <the-data />
   </div>
